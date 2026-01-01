@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public abstract class BaseSingleController<S extends BaseSingleService<T>, T extends BaseEntity> {
 
-    @Autowired
+//    @Autowired
     protected S baseService;
 
     @PostMapping

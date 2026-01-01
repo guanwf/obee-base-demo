@@ -1,13 +1,10 @@
 package com.obee.base.serviceImpl;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.obee.base.model.DemoVO;
-import com.obee.base.service.BaseSingleService;
 import com.obee.base.service.DemoService;
+import com.obee.base.support.BaseSingleServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @description:

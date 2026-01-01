@@ -1,4 +1,4 @@
-package com.obee.base.serviceImpl;
+package com.obee.base.support;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
