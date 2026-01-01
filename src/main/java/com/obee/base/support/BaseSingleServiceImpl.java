@@ -26,9 +26,11 @@ public abstract class BaseSingleServiceImpl<T extends BaseEntity>
     // 采用 protected 允许子类覆盖，但对外不可见
 
     protected void beforeCreate(T entity) {
+        log.info("BaseSingle.beforeAdd");
     }
 
     protected void afterCreate(T entity) {
+        log.info("BaseSingle.afterCreate");
     }
 
     protected void beforeModify(T entity) {

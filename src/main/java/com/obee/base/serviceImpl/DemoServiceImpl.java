@@ -14,4 +14,10 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class DemoServiceImpl extends BaseSingleServiceImpl<DemoVO> implements DemoService {
+
+    @Override
+    protected void beforeCreate(DemoVO entity) {
+        log.info("entity>{}",entity.getGoodsId());
+    }
+
 }

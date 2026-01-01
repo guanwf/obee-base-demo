@@ -77,17 +77,17 @@ public abstract class BaseDynamicServiceImpl<M extends BaseEntity>
         for (ChildModule childConfig : info.children()) {
             try {
                 // 从 Spring 容器获取 Service Bean
-                BaseSingleService<?> serviceBean = applicationContext.getBean(childConfig.service());
+//                BaseSingleService<?> serviceBean = applicationContext.getBean(childConfig.service());
 
                 // 构建 Handler
                 ChildHandler handler = new ChildHandler(
                         childConfig.entity(),
-                        serviceBean,
+//                        serviceBean,
                         childConfig.fkField()
                 );
 
                 childHandlerMap.put(childConfig.key(), handler);
-                log.info("动态加载子表配置: Key={}, Entity={}, Service={}",childConfig.key(), childConfig.entity().getSimpleName(), childConfig.service().getSimpleName());
+                log.info("动态加载子表配置: Key={}, Entity={} ", childConfig.key(), childConfig.entity().getSimpleName());
 
             } catch (Exception e) {
                 log.error("加载子表配置失败: Key=" + childConfig.key(), e);
@@ -117,7 +117,7 @@ public abstract class BaseDynamicServiceImpl<M extends BaseEntity>
 
             if (handler != null) {
 //                processOneChildTable2(dto.getMaster().getId(), nodes, handler);
-                processOneChildTable(dto.getMaster().getId(), nodes, handler,key);
+                processOneChildTable(dto.getMaster().getId(), nodes, handler, key);
             } else {
                 log.warn("收到未配置的子表Key: {}, 请检查 @ModuleInfo 配置", key);
             }
@@ -190,7 +190,7 @@ public abstract class BaseDynamicServiceImpl<M extends BaseEntity>
         if (nodes == null || nodes.isEmpty()) return;
 
         ChildDataHook<E> hook = (ChildDataHook<E>) hookRegistry.get(key);
-        BaseSingleService<E> service = handler.service();
+//        BaseSingleService<E> service = handler.service();
 
         // 临时容器
         List<Long> idsToDelete = new ArrayList<>();
@@ -268,9 +268,7 @@ public abstract class BaseDynamicServiceImpl<M extends BaseEntity>
         }
     }
 
-
-    public void check(String sheetId){
-
+    public void check(String sheetId) {
     }
 
 }

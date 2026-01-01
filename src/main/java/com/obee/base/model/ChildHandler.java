@@ -9,6 +9,6 @@ import com.obee.base.service.BaseSingleService;
  */
 public record ChildHandler (
     Class<? extends BaseEntity> entityClass,
-    BaseSingleService service,
+//    BaseSingleService service,
     String fkFieldName // 存储外键字段名 (如 "orderId")
 ){}

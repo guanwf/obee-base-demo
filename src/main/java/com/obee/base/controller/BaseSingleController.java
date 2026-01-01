@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public abstract class BaseSingleController<S extends BaseSingleService<T>, T extends BaseEntity> {
 
-//    @Autowired
+    @Autowired
     protected S baseService;
 
-    @PostMapping
+    @PostMapping("/add")
     public Result<Boolean> add(@RequestBody T entity) {
         // 调用自定义的 create 方法 (包含 Hook 逻辑)
         return Result.success(baseService.create(entity));

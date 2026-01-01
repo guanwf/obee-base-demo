@@ -31,7 +31,7 @@ public @interface ChildModule {
      * 子表对应的 Service Class
      * 基类会自动从 Spring 容器中获取这个类型的 Bean
      */
-    Class<? extends BaseSingleService> service();
+//    Class<? extends BaseSingleService> service();
 
     /**
      * 子表中关联主表的外键字段名 (Java 属性名，非数据库列名)

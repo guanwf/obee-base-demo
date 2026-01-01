@@ -1,0 +1,10 @@
+
+
+###
+POST http://127.0.0.1:8080/demo/add
+Content-Type: application/json;charset=UTF-8
+
+{
+ "goodsId":"1",
+  "id":1
+}

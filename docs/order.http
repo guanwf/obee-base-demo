@@ -1,0 +1,46 @@
+
+"createTime": "2026-01-01",
+"modifyTime": "2026-01-01",
+
+###
+POST http://127.0.0.1:8080/order/save
+Content-Type: application/json;charset=UTF-8
+
+{
+  "master": {
+    "id": 1,
+    "tid": 1,
+    "orderId": "orderId",
+    "orderName": "orderName",
+
+    "creater": "demo",
+    "modifyer": "demo",
+    "rowStatus": "1"
+  },
+  "slaves": {
+    "OrderItem": [
+      {
+        "goodsId": "1",
+        "qty": 10,
+        "rowStatus": "1"
+      },
+      {
+        "goodsId": "2",
+        "qty": 20,
+        "rowStatus": "2"
+      }
+    ],
+    "OrderPay": [
+      {
+        "payId": "1",
+        "qty": 10,
+        "rowStatus":"3"
+      },
+      {
+        "payId": "2",
+        "qty": 20,
+        "rowStatus": "1"
+      }
+    ]
+  }
+}
