@@ -25,6 +25,12 @@ public abstract class BaseSingleController<S extends BaseSingleService<T>, T ext
         return Result.success(baseService.create(entity));
     }
 
+    @PostMapping("/save")
+    public Result<Boolean> add(@RequestBody T[] rows) {
+        // 调用自定义的 create 方法 (包含 Hook 逻辑)
+        return Result.success(baseService.save(rows));
+    }
+
     @PutMapping
     public Result<Boolean> update(@RequestBody T entity) {
         // 调用自定义的 modify 方法 (包含 Hook 逻辑)

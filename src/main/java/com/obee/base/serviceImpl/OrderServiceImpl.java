@@ -93,6 +93,7 @@ public class OrderServiceImpl extends BaseDynamicServiceImpl<Order> implements O
             public void afterAdd(OrderItem item){
                 log.info("{}",item.getGoodsId());
             }
+
         });
 
         // === 2. 定义 "pays" (支付记录) 的业务逻辑 ===

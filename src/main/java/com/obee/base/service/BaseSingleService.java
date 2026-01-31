@@ -12,6 +12,8 @@ import java.util.List;
  */
 public interface BaseSingleService<T extends BaseEntity> {
 
+    boolean save(T[] rows);
+
     /**
      * 新增 (带钩子)
      */
@@ -41,4 +43,5 @@ public interface BaseSingleService<T extends BaseEntity> {
      * 列表查询
      */
     List<T> list(T condition);
+
 }

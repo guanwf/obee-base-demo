@@ -8,3 +8,26 @@ Content-Type: application/json;charset=UTF-8
  "goodsId":"1",
   "id":1
 }
+
+
+###
+POST http://127.0.0.1:8080/demo/save
+Content-Type: application/json;charset=UTF-8
+
+[
+    {
+      "goodsId":"1",
+      "id":1,
+      "rowStatus": "1"
+    },
+    {
+      "goodsId":"2",
+      "id":2,
+      "rowStatus":"2"
+    },
+    {
+    "goodsId":"3",
+    "id":3,
+    "rowStatus":"3"
+    }
+]
